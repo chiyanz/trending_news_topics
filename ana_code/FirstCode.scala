@@ -77,6 +77,6 @@ final_df.show()
 
 df.write
   .option("header", "true")
-  .csv("hdfs://nyu-dataproc-m/user/qz2190_nyu_edu/project/combined_cleaned.csv")
+  .csv("hdfs://nyu-dataproc-m/user/{$USER}_nyu_edu/project/combined_cleaned.csv")
 
 // TODOS: keep track of publisher, group by categories, and define more category binary columns
