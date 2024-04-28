@@ -19,7 +19,9 @@ The news organizations being analyzed so far are CNBC and Huffspot, the data is 
 
 The downloaded datasets can be found under the /data_ingest directory.
 
-There are multiple tasks that where done: data profiling, data cleaning, and data analysis. 
+Analytic code will reference data stored in the data_ingest directory, no update to path is needed once the entire folder is uploaded.
+
+There are multiple tasks that were done: data profiling, data cleaning, and data analysis. 
 Data profiling is done in the /profiling_code folder
 Data cleaning is done in the /etl_code folder
 Data analytics is done in the /ana_code folder
@@ -28,6 +30,8 @@ Ther is no mutual dependency between the folders, and the bulk of our analysis c
 Formatted output data extracted from HDFS can be found in output_data folder
 
 Screenshots of code running and outputs can be found in /screenshots
+
+The **final** resulting csv output is included in output and named classified_news_v2.csv
 
 ## Roadmap
 - [x] Data Selection

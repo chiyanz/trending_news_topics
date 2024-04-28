@@ -1,8 +1,8 @@
 // for both columns, keep only the columns we need and drop all rows with missing data
-val df_raw = spark.read.option("header", "true").csv("project/cnbc_news_datase.csv")
+val df_raw = spark.read.option("header", "true").csv("final_project/data_ingest/cnbc_news_datase.csv")
 val df_withNa = df_raw.select("published_at", "keywords")
 
-val df2_raw = spark.read.option("header", "true").csv("project/huffpost_news_data.csv")
+val df2_raw = spark.read.option("header", "true").csv("final_project/data_ingest/huffpost_news_data.csv")
 val df2_withNa = df2_raw.select("published_at", "tags")
 val df = df_withNa.na.drop(how="all")
 val df2 = df2_withNa.na.drop(how="all")

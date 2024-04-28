@@ -1,10 +1,5 @@
-import org.apache.spark.sql.functions._
-import org.apache.spark.sql.SparkSession
-
-val spark = SparkSession.builder.appName("Data Analysis").getOrCreate()
-
 // read data
-var df = spark.read.option("header", "true").csv("project/cnbc_news_datase.csv")
+var df = spark.read.option("header", "true").csv("final_project/data_ingest/cnbc_news_datase.csv")
 
 val df_parsed = df.withColumn("timestamp", to_timestamp($"published_at", "yyyy-MM-dd'T'HH:mm:ssZ"))
   .withColumn("year", year($"timestamp"))
@@ -78,5 +73,3 @@ final_df.show()
 df.write
   .option("header", "true")
   .csv("hdfs://nyu-dataproc-m/user/{$USER}_nyu_edu/project/combined_cleaned.csv")
-
-// TODOS: keep track of publisher, group by categories, and define more category binary columns
