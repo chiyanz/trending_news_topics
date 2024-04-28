@@ -12,4 +12,4 @@ STORED AS TEXTFILE
 LOCATION '/user/hive/warehouse/news_data';
 
 -- load 
-LOAD DATA INPATH '/path/to/your/cleaned_data.csv' INTO TABLE news_data;
+LOAD DATA INPATH 'hdfs://nyu-dataproc-m/user/yc5508_nyu_edu/project/classified_news_v2.csv' INTO TABLE news_data;
