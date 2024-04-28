@@ -35,4 +35,4 @@ Screenshots of code running and outputs can be found in /screenshots
 - [x] Data Profiling 
 - [x] Standarization of datasets and keyword extraction
 - [x] News category classification
-- [ ] SQL implementation through Hive/Presto (WIP)
+- [x] SQL implementation through Hive/Presto (WIP)
