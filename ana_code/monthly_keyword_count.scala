@@ -1,5 +1,5 @@
 // load the cleaned df
-val df = spark.read.option("header", "true").csv("news_classified.csv")
+val df = spark.read.option("header", "true").csv("classified_news_v2.csv")
 
 // explode the keywords column
 val explodedDF = processedDF.withColumn("keyword", explode(col("keywords")))
